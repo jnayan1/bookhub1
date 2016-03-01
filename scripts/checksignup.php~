@@ -1,0 +1,59 @@
+<?php
+$name = $_GET['name'];
+$username = $_GET['user'];
+$email = $_GET['email'];
+$gender = $_GET['gender'];
+$pass = $_GET['pass'];
+$conpass = $_GET['conpass'];
+
+$name = preg_replace('#[^A-Za-z0-9]#i', '', $name);
+$username = preg_replace('#[^A-Za-z0-9]#i', '', $username);
+$email = preg_replace('#[^A-Za-z0-9@.]#i', '', $email);
+
+if($conpass == "" || $name == "" || $username == "" || $email == "" || $pass == "")
+{
+	die ("All fields are mandatory");
+}
+else if(!filter_var($email,FILTER_VALIDATE_EMAIL))
+{    
+	die ("Invalid email id");
+}
+else if(strlen($pass) < 8)
+{
+	die ("Password should have minimum 8 characters");
+}
+else if ($gender == "false")
+{
+	die ("Please select a gender");
+}
+else if($pass != $conpass)
+{
+	die ("Passwords do not match");
+}
+else {
+	$pass = md5($pass);
+    $user='root';
+	$password='';
+	$database='BookHub';
+
+	$connect = mysql_connect('localhost',$user,$password) or die ("could not connect to database");
+	mysql_select_db($database) or die ("no database");
+	$allusers = mysql_query("SELECT username FROM tempsignup WHERE username = '$username' OR email = '$email' LIMIT 1");
+	$count = mysql_num_rows($allusers);
+	$allusers = mysql_query("SELECT username FROM signup WHERE username = '$username' OR email = '$email' LIMIT 1");
+	$count = $count + mysql_num_rows($allusers);
+	if($count != 0){
+		die ("username or email already exists");
+	}
+	else {
+		$md5sum = md5($email);
+		mysql_query("INSERT INTO tempsignup VALUES ('$username', '$name', '$pass', '$email', 'md5sum', '$gender')");
+        $to = $email;
+		$subject = "Welcome to BookHub";
+		$message = "Your registration with BookHub is successful! To activate using your account, click on the link given http://" . $_SERVER['SERVER_ADDR'] . "/scripts/confirmreg.php?email=" . $md5sum;
+		$headers = "From: registration@BookHub.com";
+		mail($to, $subject, $message, $headers);
+		echo "Account created, for activating check your email";	
+	}
+}
+?>

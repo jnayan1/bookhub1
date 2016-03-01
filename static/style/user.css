@@ -1,0 +1,75 @@
+.main {
+	margin-top:60px;
+}
+#cover {
+	height: 180px;
+	width: 180px;
+}
+#alternate-navbar {
+	margin-top:30px;
+}
+.info {
+}
+.subresult {
+	margin-top:-30px;
+}
+.username {
+	font-size: 2.7em;
+	font-family: "Times New Roman";
+}
+.inf {
+	font-size: 1.3em;
+}
+#quote {
+	font-size: 2.7em;
+	margin-top:12px;
+	margin-left:-70px;
+}
+.col-xs-12 {
+	margin-top:50px;
+}
+#booksadd {
+	margin-left: 88px;
+	font-size: 2em;
+}
+.read {
+	text-align: center;
+	font-size: 1.3em;
+}
+
+.outerdiv {
+	width:100%;
+	height: 230px;
+	margin-top:10px;
+}
+
+.images {
+	height:140px;
+	width:100px;
+}
+.sta {
+	margin-left:83px;
+}
+.more {
+	margin-left:85px;
+	margin-top:-30px;
+}
+#nobook {
+	margin-left: 90px;
+}
+.rembutton {
+	width: 80px;
+	margin-top: -145px;
+	margin-left: 685px;
+}
+.rembut {
+	background-color:  rgba(162, 157, 154, 1);
+	border-style: none;
+}
+.rembut:hover {
+	background-color: rgba(117, 112, 110, 1);
+	border-style: none;
+}
+.nav-justified > li > a:hover {
+	background-image: -moz-linear-gradient(center top , #DDDDDD 0%, rgba(190, 190, 190, 1) 100%);
+}

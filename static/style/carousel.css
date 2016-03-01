@@ -1,0 +1,99 @@
+#carousel{
+    overflow:hidden;
+    width:500px;
+}
+
+.panes{
+    list-style:none;
+    position:relative;
+    width:500%; /* images*100 */
+    overflow:hidden; /* clear floats only */
+     
+    -webkit-animation:carousel 45s infinite;
+       -moz-animation:carousel 45s infinite;
+            animation:carousel 45s infinite;
+}
+.panes > li{
+    position:relative;
+    float:left;
+    width:20%; /* 100/images */
+}
+.panes > li > a{
+    display:block;
+}
+.carousel img{
+    display:block;
+    width:100%;
+    max-width:100%;
+}
+.carousel h2{
+    font-size:1em;
+    padding:0.5em;
+    position:absolute;
+    right:10px;
+    bottom:10px;
+    left:10px;
+    text-align:right;
+    color:#fff;
+    background-color:rgba(0,0,0,0.75);
+}
+
+@-moz-keyframes carousel{
+    0%    { left:0; }
+    11%   { left:0; }
+    12.5% { left:-100%; }
+    23.5% { left:-100%; }
+    25%   { left:-199%; }
+    36%   { left:-199%; }
+    37.5% { left:-290%; }
+    48.5% { left:-290%; }
+    50%   { left:-385%; }
+    61%   { left:-385%; }
+    62.5% { left:-290%; }
+    73.5% { left:-290%; }
+    75%   { left:-199%; }
+    86%   { left:-199%; }
+    87.5% { left:-100%; }
+    98.5% { left:-100%; }
+    100%  { left:0; }
+}
+
+@-webkit-keyframes carousel{
+    0%    { left:0; }
+    11%   { left:0; }
+    12.5% { left:-100%; }
+    23.5% { left:-100%; }
+    25%   { left:-199%; }
+    36%   { left:-199%; }
+    37.5% { left:-290%; }
+    48.5% { left:-290%; }
+    50%   { left:-385%; }
+    61%   { left:-385%; }
+    62.5% { left:-290%; }
+    73.5% { left:-290%; }
+    75%   { left:-199%; }
+    86%   { left:-199%; }
+    87.5% { left:-100%; }
+    98.5% { left:-100%; }
+    100%  { left:0; }
+}
+
+@keyframes carousel{
+    0%    { left:0; }
+    11%   { left:0; }
+    12.5% { left:-100%; }
+    23.5% { left:-100%; }
+    25%   { left:-199%; }
+    36%   { left:-199%; }
+    37.5% { left:-290%; }
+    48.5% { left:-290%; }
+    50%   { left:-385%; }
+    61%   { left:-385%; }
+    62.5% { left:-290%; }
+    73.5% { left:-290%; }
+    75%   { left:-199%; }
+    86%   { left:-199%; }
+    87.5% { left:-100%; }
+    98.5% { left:-100%; }
+    100%  { left:0; }
+}

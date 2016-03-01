@@ -1,0 +1,29 @@
+<script>
+$("#check").click(function(){
+    $.ajax({
+    url: "../scripts/checklogin.php",
+    type: 'POST',
+    data: {
+        username: document.getElementById('name').value,
+        password: document.getElementById('pass').value,
+    },
+    success: function(msg){
+        if(msg == "success")
+        {
+        //document.getElementById("results").innerHTML = msg;
+        window.location = "http://localhost/anurag/BookHub/html/user.php";
+        }
+        else {
+    document.getElementById("results").innerHTML = msg;
+  }
+    },
+    error: function()
+    {
+    	alert("damn!");
+    }
+});
+});
+$(document).ready(function(){
+    $(".input").val("");
+});
+</script>

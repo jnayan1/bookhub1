@@ -1,0 +1,44 @@
+.main {
+	margin-top:50px;
+}
+#cover {
+	height: 300px;
+	width: 210px;
+}
+.info {
+	margin-top: -17px;
+}
+.bkname {
+	font-size: 4em;
+	font-family: "Times New Roman";
+}
+#toberead {
+margin-top: 10px;
+width: 120px;
+margin-left: 43px;
+}
+
+.reviews {
+	margin-top: 50px;
+}
+.review {
+	margin-left:50px;
+}
+
+#review_button{
+	margin-left: -67px;
+}
+#bton {
+	width: 55px;
+height: 30px;
+font-size: 0.9em;
+}
+textarea {
+	background-color: #F5F5F5;
+}
+#user {
+	font-size:1.3em;
+}
+#clear:hover {
+	cursor: pointer;
+}

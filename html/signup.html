@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <script src="../scripts/jquery-1.10.2.min.js"></script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>bookhub: Signup</title>
+
+    <link href="../static/style/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/style/signin.css" rel="stylesheet">
+    <link href="../static/style/navbar.css" rel="stylesheet">
+    <link href="../static/style/sticky-footer.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../html/index.php">bookhub</a>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>     
+  
+    <div class="container">
+
+      <form class="form-signin" id="signup">
+        <h2 class="form-signin-heading">Please sign up</h2>
+      
+         <div id="results"></div><br />
+         <input type="text" class="form-control" id="name" name="name" placeholder="Name" required autofocus>
+         <input type="text" class="form-control" id="username" name="username" placeholder="Username" required autofocus>
+         <input type="email" class="form-control" id="email" name="email" placeholder="Email address" required autofocus>
+         <input type="password" class="form-control" id="pass" name="pass" placeholder="Password" required autofocus>
+         <input type="password" class="form-control" id="conpass" name="conpass" placeholder="Confirm-Password" required autofocus>
+         <textarea type="text" class="form-control" id="quote" name="quote" placeholder="Favourite quote" required autofocus></textarea>
+         <br />
+         Upload your photo<input name="userimg" type="file" class="inputFile" id="userImage"/>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit" id="check">Sign Up For Free</button>
+        <div style = "margin-top: 9px;">Already registered? &nbsp;
+        <a style = "font-size: 1.3em; color: rgba(12, 123, 123, 1);" href = "signin.html"><span>Sign in</span></a>
+        </div>
+      </form>
+
+    </div> 
+    
+    <div id="footer">
+      <div class="container1">
+        <p class="text-muted">© 2014 bookhub Inc.</p>
+      </div>
+    </div>
+ 
+  <script src="../scripts/signup.js"></script>
+
+  </body>
+</html>
